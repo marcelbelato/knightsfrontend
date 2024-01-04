@@ -2,6 +2,9 @@
   <nav>
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
+    <router-link to="/knights">Knights List</router-link>
+    <router-link to="/knights/:id">Knight Details</router-link>
+    <router-link to="/create-knight">Create Knight</router-link>
   </nav>
   <router-view/>
 </template>
