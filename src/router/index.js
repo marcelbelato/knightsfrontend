@@ -8,36 +8,36 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/about',
-    name: 'about',
+    path: '/all-knights',
+    name: 'AllKnights',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  },
-  {
-    path: '/knights',
-    name: 'knights',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "knights" */ '../views/KnightsListView.vue')
-  },
-  {
-    path: '/knight/:id',
-    name: 'knight',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "knight" */ '../views/KnightView.vue')
+    component: () => import('../views/AllKnightsView.vue')
   },
   {
     path: '/create-knight',
-    name: 'create-knight',
+    name: 'CreateKnight',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "create-knight" */ '../views/CreateKnightView.vue')
+    component: () => import('../views/CreateKnightView.vue')
+  },
+  {
+    path: '/edit-knight/:id',
+    name: 'EditKnight',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import('../views/EditKnightView.vue')
+  },
+  {
+    path: '/delete-knight/:id',
+    name: 'DeleteKnight',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import('../views/DeleteKnightView.vue')
   },
 ]
 

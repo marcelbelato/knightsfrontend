@@ -1,14 +1,11 @@
 import axios from "axios";
 
-const API = axios.create({
-  baseURL: process.env.KNIGHTS_API_BASE_URL,
-  headers: {
-    "Content-Type": "application/json",
-    },
+const api = axios.create({
+  baseURL: "http://localhost:32770",
 });
 
 // Add a request interceptor
-API.interceptors.request.use(
+api.interceptors.request.use(
   function (config) {
     // Do something before request is sent
     // console.log("Request sent to API", config);
@@ -22,7 +19,7 @@ API.interceptors.request.use(
 );
 
 // Add a response interceptor
-API.interceptors.response.use(
+api.interceptors.response.use(
   function (response) {
     // Do something with response data
     // console.log("Response from API", response);
@@ -35,4 +32,4 @@ API.interceptors.response.use(
   }
 );
 
-export default API;
+export default api;
