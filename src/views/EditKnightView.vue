@@ -1,20 +1,22 @@
 <template>
-  <div class="hero bg-gray">
-    <div class="hero-body">
-      <h3>Edit Knight</h3>
-      <p>Here you can edit the Nickname of your character.</p>
+  <div class="wrapper">
+    <div class="hero bg-gray">
+      <div class="hero-body">
+        <h3>Edit Knight</h3>
+        <p>Here you can edit the Nickname of your character.</p>
+      </div>
+    </div>
+    <div class="container">
+      <form class="form-horizontal" @submit.prevent="updateKnight">
+        <div class="form-group">
+          <label class="form-label" for="nickname">Nickname</label>
+          <input class="form-input" type="text" id="nickname" placeholder="Nickname" v-model="knight.nickname">
+        </div>
+        <br />
+        <button class="btn btn-primary">Update Knight</button>
+      </form>
     </div>
   </div>
-  <div class="container">
-  <form class="form-horizontal col-6" @submit.prevent="updateKnight">
-    <div class="form-group">
-      <label class="form-label" for="nickname">Nickname</label>
-      <input class="form-input" type="text" id="nickname" placeholder="Nickname" v-model="knight.nickname">
-    </div>
-    <br />
-    <button class="btn btn-primary">Update Knight</button>
-  </form>
-</div>
 </template>
 
 <script>
@@ -56,3 +58,16 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.wrapper {
+  max-width: 800px;
+  padding: 0px 15px 20px 15px;
+  margin: 0 auto;
+  font-size: 18px;
+  text-align: center;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #666;
+}
+</style>

@@ -15,5 +15,15 @@ npm run serve
 npm run build
 ```
 
+### Running on Docker container
+```
+docker-compose up
+```
+
+### Remove Docker container
+```
+docker-compose down
+```
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).

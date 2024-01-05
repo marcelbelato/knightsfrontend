@@ -12,12 +12,12 @@
           <option>All</option>
           <option>Heroes</option>
         </select>
-        &nbsp; <button type="submit" class="btn btn-primary">Filter</button>
+        <a class="btn" @click="getAllKnights">Filter</a>
       </div>
     </form>
     <br />
     <table class="table table-striped table-hover">
-      <thead>
+      <thead class="head">
         <tr>
           <th>Name</th>
           <th>Age</th>
@@ -25,7 +25,7 @@
           <th>KeyAttribute</th>
           <th>Attack</th>
           <th>Experience</th>
-          <th>Class</th>
+          <th>IsHero</th>
           <th>Actions</th>
         </tr>
       </thead>
@@ -37,7 +37,7 @@
           <td>{{ knight.keyAttribute }}</td>
           <td>{{ knight.attack }}</td>
           <td>{{ knight.experience }}</td>
-          <td>{{ knight.class }}</td>
+          <td>{{ knight.isHero }}</td>
           <td>
             <router-link :to="{ name: 'EditKnight', params: { id: knight.id } }">
               <i class="icon icon-edit"></i>
@@ -73,8 +73,20 @@ export default {
       api.getAllKnights(this.filter).then(response => {
         this.knights = response.data;
       });
-    }
+    },
+    deleteKnight(id) {
+      api.deleteKnight(id).then(() => {
+        this.getAllKnights();
+      });
+    },
   }
 };
 
 </script>
+
+<style scoped>
+.head {
+  background-color: #e6e6e6;
+  font-size: 20px;
+}
+</style>

@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:32770",
+  baseURL: process.env.KNIGHTS_API_BASE_URL || "http://localhost:32770",
 });
 
 // Add a request interceptor
