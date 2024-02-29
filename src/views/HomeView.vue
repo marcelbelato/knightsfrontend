@@ -1,14 +1,13 @@
 <template>
   <div class="home">
-    <img alt="BTG logo" src="../assets/btg_logo.png">
     <div class="wrapper">
       <h3>Seja bem-vindo(a) ao App Knights Challenge</h3>
       <p>
-        Aplicação desenvolvida por <a href="https://github.com/marcelbelato">Marcel Belato</a>, afim de seguir com o desafio proposto pela empresa BTG Pactual, para a posição de Tech Lead Fullstack para a célula de IT Credit Risk.
+        Aplicação desenvolvida por <a href="https://github.com/marcelbelato">Marcel Belato</a>, afim de seguir com a construção de portfólio.
       </p>
       <p>
         A aplicação foi desenvolvida utilizando o framework Vue.js, 
-        com o objetivo de criar uma SPA (Single Page Application), que consome uma API REST, desenvolvida em .NET 7 e C#, e banco de dados MongoDB.
+        com o objetivo de criar uma SPA (Single Page Application), que consome uma API REST, desenvolvida em .NET 7 e C#, e banco de dados MongoDB (Atlas).
       </p>
     </div>
   </div>
